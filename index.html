@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Performance Manpower Supply Corp. | DMW-Accredited Recruitment Agency</title>
+    <meta name="description" content="DMW-accredited manpower agency providing quality recruitment and workforce development services in the Philippines">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2a4365;  /* Deep blue */
+            --secondary: #e53e3e;  /* Vibrant red */
+            --accent: #4299e1;  /* Sky blue */
+            --light-accent: #bee3f8;  /* Light blue */
+            --dark: #1a365d;  /* Dark blue */
+            --light: #f7fafc;  /* Very light gray */
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        header.sticky {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(42, 67, 101, 0.9), rgba(42, 67, 101, 0.7));
+            z-index: 1;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #c53030;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .section-subtitle {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            background-color: var(--primary);
+            color: var(--white);
+            font-size: 2.5rem;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-content h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        /* Job Openings */
+        .jobs {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .job-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .job-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 80px 80px 0;
+            border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+        }
+        
+        .job-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .job-header .location {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .job-header .location i {
+            margin-right: 5px;
+        }
+        
+        .job-details {
+            padding: 20px;
+        }
+        
+        .job-details ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .job-details ul li {
+            margin-bottom: 10px;
+            display: flex;
+        }
+        
+        .job-details ul li i {
+            color: var(--secondary);
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .job-salary {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .job-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .btn-details {
+            background-color: var(--light-accent);
+            color: var(--dark);
+        }
+        
+        .btn-details:hover {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+        
+        /* Process Timeline */
+        .process {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--accent);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: var(--white);
+            border: 4px solid var(--secondary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -12px;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 0 15px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--secondary);
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Success Stories */
+        .success-stories {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .story-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .story-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .story-card:hover .story-image img {
+            transform: scale(1.1);
+        }
+        
+        .story-content {
+            padding: 20px;
+        }
+        
+        .story-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .story-content .position {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .story-content p {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .read-more {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .read-more i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #e2e8f0;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            background-color: var(--white);
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Accreditation */
+        .accreditation {
+            padding: 60px 0;
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .accreditation-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .accreditation-logos img {
+            height: 60px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s;
+        }
+        
+        .accreditation-logos img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.3s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 20px;
+            position: relative;
+        }
+        
+        .modal-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .job-detail-item {
+            margin-bottom: 20px;
+        }
+        
+        .job-detail-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .highlight-item {
+            background-color: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .highlight-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        .specialization-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .specialization-list li {
+            background-color: var(--light);
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .specialization-list li i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .process-steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .process-steps li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            counter-increment: step-counter;
+        }
+        
+        .process-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .process-steps li span {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .modal-footer {
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .left::after,
+            .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: left 0.3s;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 20px auto;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                min-height: 500px;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .job-actions {
+                flex-direction: column;
+            }
+            
+            .job-actions .btn {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            
+            .highlight-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .specialization-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=254,fit=crop,q=95/mp8vKGbqkocD7nzb/48449abf-6396-4581-ba21-f9b6dfcae60f-transformed-photoroom-YD06XyB9r1iNg4oX.png" alt="Total Performance Manpower Supply Corp. Logo">
+                <div class="logo-text">
+                    <h1>Total Performance</h1>
+                    <p>Manpower Supply Corporation</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#jobs">Job Openings</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop poster="hero-poster.jpg">
+            <source src="https://videos.pexels.com/video-files/3201492/3201492-hd_1920_1080_25fps.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1224,h=424,fit=crop/mp8vKGbqkocD7nzb/image_2024-11-13_211952747-m5KwQWV46yiVn86q.png" alt="Construction workers collaborating" style="width:100%;height:100%;object-fit:cover;">
+        </video>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Empowering Filipino Talent Globally</h2>
+                <p>As a DMW-accredited agency, we connect skilled Filipino professionals with reputable international employers through ethical recruitment and comprehensive support.</p>
+                <div class="hero-buttons">
+                    <a href="#jobs" class="btn">Browse Jobs</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p class="section-subtitle">Comprehensive workforce solutions tailored to meet global demands and empower Filipino professionals</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Overseas Recruitment</h3>
+                        <p>We specialize in matching qualified Filipino professionals with international employers across various industries with ethical hiring practices.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Training & Development</h3>
+                        <p>Comprehensive pre-departure orientation and skills enhancement programs to prepare workers for success abroad.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Deployment Assistance</h3>
+                        <p>End-to-end support from documentation to travel arrangements for smooth overseas deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Total Performance Manpower Team">
+            </div>
+            <div class="about-content">
+                <h2>About Our Agency</h2>
+                <p>Total Performance Manpower Supply Corp. is a Department of Migrant Workers (DMW) accredited recruitment agency committed to ethical hiring practices and quality workforce deployment.</p>
+                <p>With years of experience in the industry, we've built strong partnerships with employers worldwide while ensuring the welfare and rights of our deployed workers.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h4>DMW Accredited</h4>
+                            <p>Fully compliant with Philippine government regulations for overseas recruitment.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h4>Global Network</h4>
+                            <p>Trusted partnerships with employers in the Middle East, Asia, Europe, and beyond.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Worker Protection</h4>
+                            <p>Commitment to ethical recruitment and protection of workers' rights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Recruitment Process</h2>
+                <p class="section-subtitle">Transparent and efficient steps from application to deployment</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Application Submission</h3>
+                        <p>Submit your complete documents including resume, certificates, and employment history through our online portal or office.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Initial Screening</h3>
+                        <p>Our recruitment team will review your application and conduct initial interviews to assess qualifications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Employer Interview</h3>
+                        <p>Qualified candidates will be scheduled for interviews with our partner employers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Job Offer & Contract Signing</h3>
+                        <p>Successful candidates will receive job offers with complete contract details for review.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Document Processing</h3>
+                        <p>We assist with all necessary documentation including work visas, medical exams, and other requirements.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Pre-Departure Orientation</h3>
+                        <p>Comprehensive training covering work expectations, cultural orientation, and country-specific information.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Deployment</h3>
+                        <p>Final arrangements for travel and accommodation, with ongoing support throughout your employment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Openings Section -->
+    <section class="jobs" id="jobs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Current Job Openings</h2>
+                <p class="section-subtitle">Explore exciting opportunities with our international partners</p>
+            </div>
+            <div class="jobs-grid">
+                <!-- Job 1 -->
+                <div class="job-card" data-job="nurse">
+                    <div class="job-header">
+                        <h3>Registered Nurses</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Saudi Arabia, UAE, UK, Canada</span>
+                        </div>
+                    </div>
+                    <div class="job-details">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Bachelor's degree in Nursing</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Minimum 2 years hospital experience</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Valid PRC license</span>
+                            </li>
+                        </ul>
+                        <span class="job-salary">Salary: $1,200 - $3,500/month</span>
+                        <div class="job-actions">
+                            <button class="btn btn-details view-details">View Details</button>
+                            <a href="#contact" class="btn">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Job 2 -->
+                <div class="job-card" data-job="electrician">
+                    <div class="job-header">
+                        <h3>Skilled Electricians</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Qatar, Kuwait, Saudi Arabia</span>
+                        </div>
+                    </div>
+                    <div class="job-details">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Vocational diploma or equivalent</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>3+ years construction experience</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Knowledge of international standards</span>
+                            </li>
+                        </ul>
+                        <span class="job-salary">Salary: $800 - $1,800/month</span>
+                        <div class="job-actions">
+                            <button class="btn btn-details view-details">View Details</button>
+                            <a href="#contact" class="btn">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Job 3 -->
+                <div class="job-card" data-job="hotel">
+                    <div class="job-header">
+                        <h3>Hotel Staff</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Singapore, Malaysia, Maldives</span>
+                        </div>
+                    </div>
+                    <div class="job-details">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Hospitality graduates preferred</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Customer service experience</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Good communication skills</span>
+                            </li>
+                        </ul>
+                        <span class="job-salary">Salary: $700 - $1,500/month</span>
+                        <div class="job-actions">
+                            <button class="btn btn-details view-details">View Details</button>
+                            <a href="#contact" class="btn">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Detail Modals -->
+    <!-- Nurse Modal -->
+    <div id="nurse-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Registered Nurses - Multiple Specializations</h3>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Saudi Arabia, UAE, UK, Canada</span>
+                </div>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="job-detail-item">
+                    <h4>Opportunity Highlights</h4>
+                    <div class="highlight-grid">
+                        <div class="highlight-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$1,200 - $3,500/month</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-home"></i>
+                            <span>Free housing/allowance</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-plane"></i>
+                            <span>Annual flight home</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-briefcase-medical"></i>
+                            <span>Full medical insurance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Specializations Needed</h4>
+                    <ul class="specialization-list">
+                        <li><i class="fas fa-heartbeat"></i> ICU Nurses</li>
+                        <li><i class="fas fa-baby"></i> Pediatric Nurses</li>
+                        <li><i class="fas fa-procedures"></i> OR Nurses</li>
+                        <li><i class="fas fa-user-md"></i> ER Nurses</li>
+                        <li><i class="fas fa-stethoscope"></i> General Ward Nurses</li>
+                    </ul>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Detailed Requirements</h4>
+                    <ul>
+                        <li><strong>Education:</strong> Bachelor of Science in Nursing from CHED-recognized institution</li>
+                        <li><strong>Experience:</strong> Minimum 2 years clinical experience (hospital setting preferred)</li>
+                        <li><strong>Licenses:</strong> Active PRC license, BLS/ACLS certification</li>
+                        <li><strong>Language:</strong> IELTS 6.5+ or OET Grade B for English-speaking countries</li>
+                        <li><strong>Documents:</strong> Updated CV, diploma/TOR, PRC ID, employment certificates</li>
+                    </ul>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Application Process</h4>
+                    <ol class="process-steps">
+                        <li><span>1</span> Submit application documents</li>
+                        <li><span>2</span> Initial screening interview</li>
+                        <li><span>3</span> Employer interview (online)</li>
+                        <li><span>4</span> Job offer and contract signing</li>
+                        <li><span>5</span> Processing of work visa</li>
+                        <li><span>6</span> Pre-departure orientation</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p><strong>Note:</strong> No placement fees. All processing fees comply with DMW regulations.</p>
+                <a href="#contact" class="btn">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Electrician Modal -->
+    <div id="electrician-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Skilled Electricians</h3>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Qatar, Kuwait, Saudi Arabia</span>
+                </div>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="job-detail-item">
+                    <h4>Opportunity Highlights</h4>
+                    <div class="highlight-grid">
+                        <div class="highlight-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$800 - $1,800/month</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-home"></i>
+                            <span>Company housing</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-bus"></i>
+                            <span>Transportation provided</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-medkit"></i>
+                            <span>Health insurance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Position Details</h4>
+                    <p>We are looking for experienced Electricians to work on major construction and maintenance projects with our partner companies in the Middle East. Successful candidates will be responsible for installing, maintaining, and repairing electrical wiring, equipment, and fixtures in commercial and residential buildings.</p>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Requirements</h4>
+                    <ul>
+                        <li><strong>Education:</strong> Vocational diploma in Electrical Technology or equivalent</li>
+                        <li><strong>Experience:</strong> Minimum 3 years of experience in construction electrical work</li>
+                        <li><strong>Skills:</strong> Knowledge of international electrical standards and codes, ability to read blueprints</li>
+                        <li><strong>Certifications:</strong> NC II or equivalent certification preferred</li>
+                        <li><strong>Physical:</strong> Good physical condition and ability to work at heights</li>
+                    </ul>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Benefits</h4>
+                    <ul>
+                        <li>Competitive tax-free salary with overtime opportunities</li>
+                        <li>Free shared accommodation with utilities</li>
+                        <li>Transportation to/from work site</li>
+                        <li>Comprehensive health insurance</li>
+                        <li>30 days paid vacation per year with round-trip air ticket</li>
+                        <li>End of service benefits as per labor law</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p><strong>Note:</strong> All positions include employment contract compliant with destination country labor laws.</p>
+                <a href="#contact" class="btn">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hotel Staff Modal -->
+    <div id="hotel-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Hotel Staff - Multiple Positions</h3>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Singapore, Malaysia, Maldives</span>
+                </div>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="job-detail-item">
+                    <h4>Available Positions</h4>
+                    <ul class="specialization-list">
+                        <li><i class="fas fa-concierge-bell"></i> Front Office Staff</li>
+                        <li><i class="fas fa-utensils"></i> Food & Beverage Service</li>
+                        <li><i class="fas fa-bed"></i> Housekeeping</li>
+                        <li><i class="fas fa-swimming-pool"></i> Recreation Staff</li>
+                        <li><i class="fas fa-spa"></i> Spa Therapists</li>
+                    </ul>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Opportunity Highlights</h4>
+                    <div class="highlight-grid">
+                        <div class="highlight-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$700 - $1,500/month</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Free meals</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-hotel"></i>
+                            <span>Staff accommodation</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-plane"></i>
+                            <span>Annual flight allowance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>General Requirements</h4>
+                    <ul>
+                        <li><strong>Education:</strong> High school diploma required, hospitality graduates preferred</li>
+                        <li><strong>Experience:</strong> 1-2 years in related position (fresh graduates may apply for some roles)</li>
+                        <li><strong>Language:</strong> Good English communication skills</li>
+                        <li><strong>Skills:</strong> Customer service orientation, teamwork, attention to detail</li>
+                        <li><strong>Appearance:</strong> Neat and professional grooming standards</li>
+                    </ul>
+                </div>
+                
+                <div class="job-detail-item">
+                    <h4>Benefits</h4>
+                    <ul>
+                        <li>Competitive salary with service charge</li>
+                        <li>Free staff meals during shifts</li>
+                        <li>Shared staff accommodation or housing allowance</li>
+                        <li>Uniforms provided and laundered</li>
+                        <li>Comprehensive training programs</li>
+                        <li>Career growth opportunities within international hotel chains</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p><strong>Note:</strong> Positions available in 4-5 star hotels and resorts.</p>
+                <a href="#contact" class="btn">Apply Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p class="section-subtitle">What our deployed workers say about their experience</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Total Performance helped me secure a nursing position in the UK. Their guidance through the entire process from documentation to pre-departure orientation was exceptional. I've been working here for 3 years now and couldn't be happier.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="nurse-testimonial.jpg" alt="Maria Santos">
+                        </div>
+                        <div class="author-info">
+                            <h4>Maria Santos</h4>
+                            <p>Staff Nurse, London, UK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Success Stories</h2>
+                <p class="section-subtitle">Inspiring journeys of Filipino professionals we've placed abroad</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="construction-worker.jpg" alt="Construction worker success story">
+                    </div>
+                    <div class="story-content">
+                        <h3>Juan Dela Cruz</h3>
+                        <span class="position">Senior Electrician, Qatar</span>
+                        <p>From working in local construction to supervising projects in Doha, Juan shares his 5-year journey through our deployment program.</p>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="hotel-staff.jpg" alt="Hotel staff success story">
+                    </div>
+                    <div class="story-content">
+                        <h3>Anna Rodriguez</h3>
+                        <span class="position">Front Office Manager, Singapore</span>
+                        <p>Anna started as a front desk agent and worked her way up to management in a luxury Singapore hotel.</p>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="healthcare-worker.jpg" alt="Healthcare worker success story">
+                    </div>
+                    <div class="story-content">
+                        <h3>Dr. Michael Tan</h3>
+                        <span class="position">Medical Specialist, Saudi Arabia</span>
+                        <p>Dr. Tan's journey from a provincial hospital to a leading medical center in Riyadh.</p>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Get answers to common questions about overseas employment</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What documents do I need to apply for overseas jobs?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Typically, you'll need the following documents: updated resume, passport, diploma/TOR, employment certificates, PRC ID (if applicable), NBI clearance, and other certificates relevant to your profession. Specific requirements may vary by country and position.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are there any placement fees?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>As a DMW-accredited agency, we strictly comply with government regulations regarding fees. There are no placement fees charged to applicants. Only legitimate processing fees (visa, medical, etc.) may apply, which will be clearly explained during orientation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does the recruitment process take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline varies depending on the position and destination country. Typically, the process takes 2-4 months from application to deployment. Some specialized positions or countries with stricter requirements may take longer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What support do you provide after deployment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide continuous support through our overseas partners and our 24/7 helpline. We assist with contract concerns, workplace issues, and any emergencies. We also conduct regular check-ins during your employment period.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditation Section -->
+    <section class="accreditation">
+        <div class="container">
+            <h2>Our Accreditation & Partners</h2>
+            <p>Recognized by government agencies and trusted by international employers</p>
+            <div class="accreditation-logos">
+                <img src="dmw-logo.png" alt="DMW Accredited">
+                <img src="poea-logo.png" alt="POEA Licensed">
+                <img src="doha-logo.png" alt="Qatar Ministry of Labor">
+                <img src="mohre-logo.png" alt="UAE Ministry of Human Resources">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p class="section-subtitle">Get in touch to start your overseas employment journey</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Our Office</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Recruitment Avenue, Makati City, Metro Manila, Philippines</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+63 2 8123 4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@totalperformancemanpower.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Monday to Friday: 8:00 AM - 5:00 PM</p>
+                                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="applicationForm">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <select required>
+                            <option value="">Position Applying For</option>
+                            <option value="nurse">Registered Nurse</option>
+                            <option value="electrician">Skilled Electrician</option>
+                            <option value="hotel">Hotel Staff</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea placeholder="Your Message/Questions" required></textarea>
+                        <button type="submit" class="btn">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Total Performance</h3>
+                    <p>Your trusted partner in ethical overseas employment and workforce solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#jobs">Job Openings</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Job Categories</h3>
+                    <ul>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Hospitality</a></li>
+                        <li><a href="#">Engineering</a></li>
+                        <li><a href="#">Domestic Helpers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Recruitment Ave, Makati</li>
+                        <li><i class="fas fa-phone-alt"></i> +63 2 8123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@totalperformance.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Total Performance Manpower Supply Corp. All Rights Reserved. | DMW Accredited Recruitment Agency</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if(this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mainMenu.classList.remove('active');
+                }
+            });
+        });
+        
+        // Job Detail Modals
+        const viewDetailBtns = document.querySelectorAll('.view-details');
+        const modals = document.querySelectorAll('.modal');
+        const modalCloseBtns = document.querySelectorAll('.modal-close');
+        
+        viewDetailBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const jobCard = btn.closest('.job-card');
+                const jobType = jobCard.getAttribute('data-job');
+                const modal = document.getElementById(`${jobType}-modal`);
+                
+                if(modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        modalCloseBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modal = btn.closest('.modal');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if(e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // Close other open items
+                faqQuestions.forEach(q => {
+                    if(q !== question) {
+                        q.parentElement.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Form Submission
+        const applicationForm = document.getElementById('applicationForm');
+        if(applicationForm) {
+            applicationForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your application! We will contact you soon.');
+                applicationForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
