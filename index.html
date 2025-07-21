@@ -1026,6 +1026,142 @@
             color: #bbb;
             font-size: 0.9rem;
         }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float i {
+            margin-top: 5px;
+        }
+
+        /* Tooltip */
+        .whatsapp-float .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+        }
+
+        .whatsapp-float:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Language Selector */
+        .language-selector {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .language-selector button {
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .language-selector button:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        .language-selector button i {
+            margin-left: 5px;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--white);
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            min-width: 150px;
+            display: none;
+            z-index: 1000;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-dropdown a {
+            display: block;
+            padding: 8px 15px;
+            color: var(--dark);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .language-dropdown a:hover {
+            background-color: var(--light-accent);
+            color: var(--primary);
+        }
+
+        .language-dropdown a i {
+            margin-right: 8px;
+        }
+
+        @media (max-width: 992px) {
+            .language-selector {
+                margin-left: 0;
+                margin-top: 15px;
+            }       
+    
+            .language-dropdown {
+                left: 0;
+                right: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
         
         /* Responsive Styles */
         @media (max-width: 992px) {
@@ -1166,6 +1302,19 @@
                 <div class="logo-text">
                     <h1>Total Performance</h1>
                     <p>Manpower Supply Corporation</p>
+                </div>
+            </div>
+            <div class="language-selector">
+                <button id="languageToggle">
+                    <i class="fas fa-globe"></i> EN
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <a href="#"><i class="fas fa-check"></i> English (EN)</a>
+                    <a href="#"><i class="fas fa-language"></i> العربية (AR)</a>
+                    <a href="#"><i class="fas fa-language"></i> 中文 (ZH)</a>
+                    <a href="#"><i class="fas fa-language"></i> Español (ES)</a>
+                    <a href="#"><i class="fas fa-language"></i> Français (FR)</a>
                 </div>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1927,6 +2076,12 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/PHONE_NUMBER" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us on WhatsApp</span>
+    </a>
+
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -2022,6 +2177,22 @@
                 e.preventDefault();
                 alert('Thank you for your application! We will contact you soon.');
                 applicationForm.reset();
+            });
+        }
+
+        // Language Selector Toggle
+        const languageToggle = document.getElementById('languageToggle');
+        const languageDropdown = document.getElementById('languageDropdown');
+
+        if (languageToggle && languageDropdown) {
+            languageToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                languageDropdown.classList.remove('active');
             });
         }
     </script>
